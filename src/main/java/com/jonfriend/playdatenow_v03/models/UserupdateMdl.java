@@ -34,11 +34,7 @@ public class UserupdateMdl {
     
     // begin joins     
 
-//    // join stateterritory 
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name="stateterritory_id")
-//	private StateterritoryMdl stateterritoryMdl;  
-//	
+
     // end joins 
     
     // instantiate the mdl class
@@ -102,14 +98,6 @@ public class UserupdateMdl {
 		this.zipCode = zipCode;
 	}
 
-//	public StateterritoryMdl getStateterritoryMdl() {
-//		return stateterritoryMdl;
-//	}
-//
-//	public void setStateterritoryMdl(StateterritoryMdl stateterritoryMdl) {
-//		this.stateterritoryMdl = stateterritoryMdl;
-//	}
-    
     // end getters/setters
     
 }

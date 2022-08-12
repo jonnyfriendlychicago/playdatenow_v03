@@ -51,23 +51,9 @@ public class PlaydateMdl {
 	@NotNull(message="Date is required.")
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date eventDate;
-	
-//	@NotNull(message="Start time is required.")
-//	@DateTimeFormat(pattern="yyyy-MM-dd")
-//	private Date eventTime;
-	
+
 	@NotBlank(message="Start Time required.")
 	private String startTimeTxt; 
-	
-//	@Transient
-//	@DateTimeFormat(pattern="yyyy-MM-dd") // ??????
-//	private Date startTime;
-	
-//	@DateTimeFormat(pattern="yyyy-MM-dd") // ??????
-//	private Date eventDateTime;
-	
-//	private Date endTime;
-
 	
 	private String eventDescription;
 
@@ -77,6 +63,7 @@ public class PlaydateMdl {
 
 //	@NotNull (message = "Max Adults Count must be 1 or greater.")
 //    @Min(value =1, message="Max Adults Count must be 1 or greater.")
+	// Aug deployment note: presently not incorporating this element, for biz reasons. 
 	private Integer maxCountAdults; 
 	
     // end: entity-specific table fields

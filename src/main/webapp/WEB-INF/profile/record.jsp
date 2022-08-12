@@ -68,24 +68,10 @@
 						<pre class="textAreaReadOut">${userProfile.aboutMe}</pre>
 					</div>
 					
-<%-- 					<div class="card p-2 border-0">
-						<p class="m-0 text-secondary" style="font-size: 0.8rem;">Location</p>
-						<p class="m-0">${userProfile.city}, ${userProfile.state} ${userProfile.zipCode}</p>
-					</div> --%>
-					
 					<div class="card p-2 border-0">
 						<p class="m-0 text-secondary" style="font-size: 0.8rem;">Location</p>
 						<p class="m-0">${userProfile.city} -- ${userProfile.zipCode}</p>
 					</div>
-					
-					<%-- 
-					<div class="card p-2 border-0">
-						<p class="m-0 text-secondary" style="font-size: 0.8rem;">State/Territory</p>
-						<p class="m-0">${userProfile.stateterritoryMdl.fullName}</p>
-					</div> 
-					--%>
-					
-										
 	
 				</div> <!-- end profileCard -->
 			</div> <!-- end col -->

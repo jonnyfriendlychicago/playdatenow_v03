@@ -96,12 +96,6 @@ public class UserSrv{
     		Long id
     		) {
     	Optional<UserMdl> potentialUser = userRpo.findById(id);
-
-//    	if(potentialUser.isPresent()) {
-//    		return potentialUser.get();}
-//    	return null;
-
-    	// JRF: above replaced by below
        	
     	if(!potentialUser.isPresent()) {
        		return null;}
@@ -115,15 +109,6 @@ public class UserSrv{
  		return userRpo.findAll();
  	}
  	
-// 	// Update a user
-// 	public UserMdl update(UserMdl x) {
-// 		
-// 		// placeholder for checking: email already in use?  username already in use? 
-// 		
-// 		return userRpo.save(x);
-// 	}
-    
- 	// above works for updating user.  
 //	BELOW = NEW VERSION OF USER UPDATE 
  	
     public UserMdl updateUserProfile(

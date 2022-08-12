@@ -18,11 +18,11 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import com.jonfriend.playdatenow_v03.models.LoginUserMdl;
-import com.jonfriend.playdatenow_v03.models.PlaydateMdl;
-import com.jonfriend.playdatenow_v03.models.StateterritoryMdl;
+//import com.jonfriend.playdatenow_v03.models.PlaydateMdl;
+//import com.jonfriend.playdatenow_v03.models.StateterritoryMdl;
 import com.jonfriend.playdatenow_v03.models.UserMdl;
 import com.jonfriend.playdatenow_v03.models.UserupdateMdl;
-import com.jonfriend.playdatenow_v03.services.StateterritorySrv;
+//import com.jonfriend.playdatenow_v03.services.StateterritorySrv;
 import com.jonfriend.playdatenow_v03.services.UserSrv;
 
 @Controller
@@ -31,8 +31,8 @@ public class IndexhomeprofileCtl {
 	@Autowired
 	private UserSrv userSrv;
 	
-	@Autowired
-	private StateterritorySrv stateterritorySrv;
+//	@Autowired
+//	private StateterritorySrv stateterritorySrv;
 	
 	 
 // ********************************************************************
@@ -143,9 +143,6 @@ public class IndexhomeprofileCtl {
 			Long userId = (Long) session.getAttribute("userId");
 			model.addAttribute("authUser", userSrv.findById(userId));
 			
-//			List<PlaydateMdl> intVar3 = playdateSrv.returnAll();
-//			model.addAttribute("playdateList", intVar3);
-
 			System.out.println("Page Display: Home"); 
 //		    return "home.jsp";  
 		    return "redirect:/playdate"; // redirecting here to playdate for now, b/c insuff time to build out dashboard/home-style page
@@ -211,7 +208,7 @@ public class IndexhomeprofileCtl {
 			UserMdl userProfileObj = userSrv.findById(userProfileId); 
 			
 			userupdateMdl.setAboutMe(userProfileObj.getAboutMe()); 
-			//JRF do above for each field we want to manage on the page, the...
+			//JRF next steps: do above for each field we want to manage on the page, then...
 			/// update the edit.jsp by removing all thsoe userProfileAsIs junky things
 			// then we can whack model.addAtt-userprofile stuff
 			
@@ -219,9 +216,9 @@ public class IndexhomeprofileCtl {
 			
 			
 			
-			// records in stateterritory dropdown
-			List<StateterritoryMdl> stateterritoryList = stateterritorySrv.returnAll();
-			model.addAttribute("stateterritoryList", stateterritoryList);  
+//			// records in stateterritory dropdown
+//			List<StateterritoryMdl> stateterritoryList = stateterritorySrv.returnAll();
+//			model.addAttribute("stateterritoryList", stateterritoryList);  
 			
 			// log page being rendered
 			System.out.println("Page Display: ProfileEdit");
@@ -259,44 +256,6 @@ public class IndexhomeprofileCtl {
 			
 			return "profile/edit.jsp";
 		}
-		
-//		// process the edit
-//		@PostMapping("/profile/edit")
-//		public String PostTheEditProfile(
-//				@Valid 
-//				@ModelAttribute("userProfileTobe") UserupdateMdl userupdateMdl
-//				, BindingResult result
-//				, Model model
-//				, HttpSession session
-//				, RedirectAttributes redirectAttributes
-//				) {
-//			
-//			// log out the unauth / deliver the auth use data
-//			if(session.getAttribute("userId") == null) {return "redirect:/logout";}
-//			Long authenticatedUserId = (Long) session.getAttribute("userId");
-//			System.out.println("authenticatedUserId: " + authenticatedUserId); 
-////			model.addAttribute("authUser", userSrv.findById(authenticatedUserId));
-//			
-//			UserMdl currentUserMdl = userSrv.findById(authenticatedUserId); //  gets the userModel object by calling the user service with the session user id
-//			
-//			if (result.hasErrors() ) { 
-//				System.out.println("on profile/edit error path"); 
-//				return "profile/edit.jsp";
-//			} else {
-//
-//				currentUserMdl.setEmail(userupdateMdl.getEmail()); 
-//				currentUserMdl.setUserName(userupdateMdl.getUserName()); 
-//				currentUserMdl.setFirstName(userupdateMdl.getFirstName() ); 
-//				currentUserMdl.setLastName(userupdateMdl.getLastName() ); 
-////				currentUserMdl.setConfirm("hello");  // this line not needed when validation taken off the confirm password field on the userMdl. 
-//				
-//				userSrv.update(currentUserMdl);
-//				
-//				return "redirect:/profile/" + currentUserMdl.getId(); 
-//			}
-//		}
-		
-//		BELOW = NEW VERSION OF USER UPDATE 
 		
 		// process the edit
 		@PostMapping("/profile/edit")

@@ -18,8 +18,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
-//JRF: keep below OUT when building the autoJoinTbl solution
-//import com.fasterxml.jackson.annotation.JsonIgnore; 
+ 
 
 @Entity
 @Table(name="rsvp")

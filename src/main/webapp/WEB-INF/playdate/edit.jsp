@@ -124,27 +124,6 @@
 									<p class="text-danger"><form:errors path="maxCountKids" />
 								</div>
 								
-								<%-- 
-								<div class="form-floating mb-3">
-									<form:input path="maxCountAdults" type="number" class="form-control" id="maxCountAdults" placeholder="maxCountAdults" min="1" step="1" value="1"/>
-									<form:label path="maxCountAdults" for="maxCountAdults">Max. Number Adults</form:label>
-									<p class="text-danger"><form:errors path="maxCountAdults" />
-								</div>
-								 --%>
-								
-								<%-- 								 
-								<h1>move these count things</h1>						
-								<div class="card p-2 border-0">
-									<p class="m-0 text-secondary" style="font-size: 0.8rem;">Count Rsvp</p>
-									<p class="m-0">${rsvpCount}</p>
-								</div>
-								
-								<div class="card p-2 border-0">
-									<p class="m-0 text-secondary" style="font-size: 0.8rem;">Sum Rsvp - rsvpInt</p>
-									<p class="m-0">${sumRsvpDotRsvpInt}</p>
-								</div>
-	
-								--%>
 								<div>
 									<button type="submit" class="btn btn-primary">Update</button>
 								</div> 

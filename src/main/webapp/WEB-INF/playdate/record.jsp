@@ -116,36 +116,8 @@
 										
 										<div class="card p-2 border-0">
 											<p class="m-0 text-secondary" style="font-size: 0.8rem;">Description</p>
-											<%-- <pre class="text-wrap">${playdate.eventDescription}</pre> --%>
 											<pre style="white-space: pre-wrap">${playdate.eventDescription}</pre>
 										</div>									
-										
-<%-- 										<div class="card p-2 border-0">
-											<p class="m-0 text-secondary" style="font-size: 0.8rem;">Max. Number Kids</p>
-											<p class="m-0">${playdate.maxCountKids}</p>
-										</div> --%>
-										
-										<%-- 										
-										<div class="card p-2 border-0">
-											<p class="m-0 text-secondary" style="font-size: 0.8rem;">Max. Number Adults</p>
-											<p class="m-0">${playdate.maxCountAdults}</p>
-										</div>
-										 --%>
-										 
-<%-- 										<div class="card p-2 border-0">
-											<p class="m-0 text-secondary" style="font-size: 0.8rem;">Count Rsvp</p>
-											<p class="m-0">${rsvpCount}</p>
-										</div>
-										
-										<div class="card p-2 border-0">
-											<p class="m-0 text-secondary" style="font-size: 0.8rem;">Rsvped Kids</p>
-											<p class="m-0">${sumRsvpDotKidsCount}</p>
-										</div>
-										
-										<div class="card p-2 border-0">
-											<p class="m-0 text-secondary" style="font-size: 0.8rem;">Open Kid Spots</p>
-											<p class="m-0">${countOpenKidSpot}</p>
-										</div> --%>
 										
 									<!-- </div>  --><!-- end playdateInfoCard -->
 								</div> <!-- end col -->
@@ -190,9 +162,6 @@
 														<fmt:formatDate value="${rsvpObjForAuthUser.createdAt}" pattern="h:mm a"/>
 														</p>
 												</div>
-												<%-- <div>
-													<a href= "/rsvp/${rsvpObjForAuthUser.id}/edit"><button class="btn btn-primary mb-2">Edit My Rsvp</button></a>
-												</div> --%>
 												
 												<a href= "/rsvp/${rsvpObjForAuthUser.id}/edit"><button class="btn btn-primary mb-2">Edit Rsvp</button></a>
 											</div>
@@ -215,12 +184,7 @@
 											<div class="card p-2 border-0">
 												<p class="m-0 text-secondary" style="font-size: 0.8rem;">Comment</p>
 												<pre style="white-space: pre-wrap"class="m-0">${rsvpObjForAuthUser.comment}</pre>
-												<%-- <pre style="white-space: pre-wrap">${playdate.eventDescription}</pre> --%>
 											</div>
-											
-											<%-- <a href= "/rsvp/${rsvpObjForAuthUser.id}/edit"><button class="btn btn-primary mb-2 w-100">Edit My Rsvp</button></a> --%>
-											<%-- <a href= "/playdate/${playdate.id}/rsvp/${rsvpObjForAuthUser.id}/edit"><button class="btn btn-primary mb-2 w-100">Edit My Rsvp</button></a> --%>
-
 
 										</c:when>
 										<c:otherwise>
@@ -296,36 +260,6 @@
 										</c:forEach>
 									</tbody>
 								</table>
-							
-								<%-- <c:forEach var="record" items="${rsvpList}">
-									<div class="card m-3" style="width: 18rem;">
-									 	<!-- <img src="..." class="card-img-top" alt="..."> -->
-										<div class="card-body">
-											<h5 class="card-title">
-												<c:choose> 
-													<c:when test="${record.eventName.length() == 0}"> 
-													Playdate @ ${record.locationName}
-													</c:when>
-													<c:otherwise>
-													${record.eventName} @ ${record.locationName}
-													</c:otherwise>
-												</c:choose>
-											</h5>
-											<p class="card-text">${record.firstName} ${record.lastName}</p>
-											
-												<pre style="white-space: pre-wrap; max-height: 10rem; overflow: ellipsis;">${record.aboutMe}</pre>
-											
-										</div>
-										<ul class="list-group list-group-flush">
-											<li class="list-group-item">Joined: <fmt:formatDate value="${record.createdAt}" pattern="MMMM"/> <fmt:formatDate value="${record.createdAt}" pattern="yyyy"/></li>
-											<li class="list-group-item"><a class="text-decoration-none" href="/profile/${record.id}">View Full Profile</a></li>
-										</ul>
-										<!-- <div class="card-body">
-											<a href="#" class="card-link">Card link</a>
-											<a href="#" class="card-link">Another link</a>
-										</div> -->
-									</div>
-								</c:forEach> --%>
 		
 							</div> <!-- end rsvpListRow -->
 

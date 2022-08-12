@@ -66,15 +66,8 @@
 								<p class="text-danger"><form:errors path="lastName" />
 							</div>
 							
-							<%-- <p> JRF cheap work around: 	${userProfileAsis.aboutMe} </p> --%>
 							<div class="form-floating mb-3">
 								<form:textarea  path="aboutMe" type="text" class="form-control" id="aboutMe" placeholder="aboutMe" style="height: 10rem;"/>
-								
-							<%-- 	<form:textarea path="aboutMe" type="text" class="form-control" id="aboutMe" placeholder="aboutMe" style="height: 10rem;">
-							
-								</form:textarea> --%>
-								
-								 
 								<form:label path="aboutMe" for="aboutMe">About me</form:label>
 								<p class="text-danger"><form:errors path="aboutMe" />
 							</div>
@@ -84,27 +77,6 @@
 								<form:label path="city" for="city">City / State</form:label>
 								<p class="text-danger"><form:errors path="city" />
 							</div>
-							
-							<%--  						
-							<div class="form-floating mb-3">
-								<form:select path="stateterritoryMdl" class="form-control" id="stateterritoryMdl" placeholder="stateterritoryMdl" >
-									<c:forEach items="${stateterritoryList}" var="record">
-										<c:choose>
-											<c:when test="${stateterritoryList.id == userProfileAsis.stateterritoryMdl.id}">
-												<form:option value="${stateterritoryList.id}" path="stateterritoryMdl" selected="true">${stateterritoryList.fullName} - ${stateterritoryList.abbreviation}</form:option>
-											</c:when>
-											<c:otherwise>
-												<form:option value="${stateterritoryList.id}" path="stateterritoryMdl">${stateterritoryList.fullName} - ${stateterritoryList.abbreviation}</form:option>
-											</c:otherwise>
-										</c:choose>
-									</c:forEach>
-									
-								</form:select>
-								<form:label path="stateterritoryMdl" for="stateterritoryMdl">State/Territory:</form:label>
-								<p class="text-danger"><form:errors path="stateterritoryMdl" />
-							</div> 
-							--%> 							
-							
 							
 							<div class="form-floating mb-3">
 								<form:input value="${userProfileAsis.zipCode}" path="zipCode" type="text" class="form-control" id="zipCode" placeholder="zipCode"/>

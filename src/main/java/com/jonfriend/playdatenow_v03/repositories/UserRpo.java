@@ -15,7 +15,6 @@ public interface UserRpo extends CrudRepository<UserMdl, Long> {
    
     Optional<UserMdl> findByUserName(String userName);     // adding to enforce username, too
     
-    // JRF 724
     List<UserMdl> findAll();
     
     UserMdl findByIdIs(Long id);

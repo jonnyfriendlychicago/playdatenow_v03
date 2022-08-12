@@ -45,28 +45,5 @@ public class PlaydateSrv {
 		return playdateRpo.findAll();
 	}
 	
-//	// get all joined twintwo
-//	public List<PlaydateMdl> getAssignedTwintwos(TwintwoMdl x){
-//		return playdateRpo.findAllByTwintwoMdl(x);
-//	}
-//	
-//	// get all un-joined twintwo
-//	public List<PlaydateMdl> getUnassignedTwintwos(TwintwoMdl x){
-//		return playdateRpo.findByTwintwoMdlNotContains(x);
-//	}
-//	
-//	// this is for removing a playdate-twintwo join record/entry
-//	
-//	public void removePlaydateTwintwoJoin(TwintwoMdl c, PlaydateMdl p ) {
-//		List<TwintwoMdl> twintwoList = p.getTwintwoMdl(); 
-//		twintwoList.remove(c); 
-//		this.playdateRpo.save(p); 
-//	}
-	// jrf add for house
-	
-//	// get all joined house
-//		public List<PlaydateMdl> getAssignedHouse(HouseMdl x){
-//			return playdateRpo.findAllByHouseMdl(x);
-//		}
 	
 }

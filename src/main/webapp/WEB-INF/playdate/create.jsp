@@ -87,14 +87,6 @@
 								<p class="text-danger"><form:errors path="maxCountKids" />
 							</div>
 							
-							<%-- 							
-							<div class="form-floating mb-3">
-								<form:input path="maxCountAdults" type="number" class="form-control" id="maxCountAdults" placeholder="maxCountAdults" min="1" step="1" value="1"/>
-								<form:label path="maxCountAdults" for="maxCountAdults">Max. Number Adults</form:label>
-								<p class="text-danger"><form:errors path="maxCountAdults" />
-							</div> 
-							--%>
-							
 							<div>
 								<button type="submit" class="btn btn-primary w-100">Create New Playdate</button>
 							</div>

@@ -48,23 +48,10 @@ public class RsvpSrv {
 	}
 	
 	// get all joined playdate 
-//	public List<RsvpMdl> getAssignedPlaydates(PlaydateMdl x){
 	public List<RsvpMdl> returnAllRsvpForPlaydate(PlaydateMdl x){
 		return rsvpRpo.findAllByPlaydateMdl(x);
 	}
-//	
-//	// get all un-joined rsvp 
-//	public List<RsvpMdl> getUnassignedTwintwos(TwintwoMdl x){
-//		return rsvpRpo.findByTwintwoMdlNotContains(x);
-//	}
-//	
-//	// this is for removing a rsvp-twintwo join record/entry
-//	
-//	public void removeRsvpTwintwoJoin(TwintwoMdl c, RsvpMdl p ) {
-//		List<TwintwoMdl> twintwoList = p.getTwintwoMdl(); 
-//		twintwoList.remove(c); 
-//		this.rsvpRpo.save(p); 
-//	}
+
 	
 	
 }

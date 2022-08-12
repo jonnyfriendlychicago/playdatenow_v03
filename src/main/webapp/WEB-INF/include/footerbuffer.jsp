@@ -2,6 +2,6 @@
 
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-<div id=footerbuffer class="container-fluid">
+<div id=footerbuffer class="container-fluid" style="height: 4rem;">
 	
 </div>

@@ -38,7 +38,7 @@ public class UserMdl {
 	// begin: entity-specific fields
 	
     @NotEmpty(message="Username required.")
-    @Size(min=3, max=128, message="Username must be between 3 and 30 characters.")
+    @Size(min=8, max=128, message="Username must be between 3 and 30 characters.")
     private String userName;
     
     @NotEmpty(message="Email required.")
@@ -46,7 +46,7 @@ public class UserMdl {
     private String email;
     
     @NotEmpty(message="Password required.")
-    @Size(min=3, max=128, message="Password must be between 8 and 20 characters.")
+    @Size(min=8, max=128, message="Password must be between 8 and 20 characters.")
     private String password;
     
     @Transient
@@ -62,10 +62,6 @@ public class UserMdl {
     
     private String city;
     
-//    private String state;
-//    
-//    private String stateTerritory;
-    
     private String zipCode;
     
     // end entity-specific fields
@@ -80,11 +76,6 @@ public class UserMdl {
     @OneToMany(mappedBy="userMdl", fetch = FetchType.LAZY)
     private List<RsvpMdl> rsvpList; 
     
-    
-//    // join stateterritory 
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name="stateterritory_id")
-//	private StateterritoryMdl stateterritoryMdl;  
 	
     // end joins 
     
@@ -213,14 +204,6 @@ public class UserMdl {
 	public void setRsvpList(List<RsvpMdl> rsvpList) {
 		this.rsvpList = rsvpList;
 	}
-
-//	public StateterritoryMdl getStateterritoryMdl() {
-//		return stateterritoryMdl;
-//	}
-//
-//	public void setStateterritoryMdl(StateterritoryMdl stateterritoryMdl) {
-//		this.stateterritoryMdl = stateterritoryMdl;
-//	}
 
     // end G/S
   

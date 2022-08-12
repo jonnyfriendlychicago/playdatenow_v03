@@ -14,13 +14,5 @@ public interface PlaydateRpo extends CrudRepository<PlaydateMdl, Long> {
 	
 	PlaydateMdl findByIdIs(Long id);
 	
-
-	
-	// trying to get house to work
-	
-//	findAllByHouseMdl
-	
-
-	
 	
 }

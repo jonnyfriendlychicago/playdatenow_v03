@@ -13,9 +13,4 @@ public interface StateterritoryRpo extends CrudRepository<StateterritoryMdl, Lon
 	
 	List<StateterritoryMdl> findAll();
 	
-//	RsvpMdl findByIdIs(Long id);
-//	
-//	List<RsvpMdl> findAllByPlaydateMdl(PlaydateMdl playdateMdl);
-//	
-//	List<RsvpMdl> findByTwintwoMdlNotContains(TwintwoMdl twintwoMdl);
 }

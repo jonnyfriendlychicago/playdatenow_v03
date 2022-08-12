@@ -62,37 +62,7 @@
 			</table>
 			
 		</div> <!-- end playdateList -->
-		
-<%-- 		<div id="playdateForm" class="container">
-			<h3>Quick Playdate Entry</h3>
-			<form:form action='/playdate/newFromList' method='post' modelAttribute='playdate'>
-				
-				<div class="form-group">
-					<form:label path="playdateName" for="playdateName">playdateName</form:label>
-					<form:input type="text" class="form-control" path="playdateName"/>
-					<p class="errorText"><form:errors path="playdateName"/>
-					</p>
-				</div>
-				
-				<div class="form-group">
-					<form:label path="playdateDesc" for="playdateDesc">playdateDesc</form:label>
-					<form:textarea type="text" class="form-control" path="playdateDesc" />
-					<p class="errorText"><form:errors path="playdateDesc" /></p>
-				</div> 				
-		
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form:form>
-		
-			<c:choose>
-				<c:when test="${path == 'errorOnCreate' }">
-					<a href= "/playdate"><button class="btn btn-secondary">Cancel</button></a>
-				</c:when>
-				<c:otherwise>
-				</c:otherwise>
-			</c:choose> 			
-		</div> <!-- end playdateForm -->
 
- --%>	
 	</div> <!-- end main -->  
  	<jsp:include page="/WEB-INF/include/footerbuffer.jsp"/>
  	<jsp:include page="/WEB-INF/include/footer.jsp"/>

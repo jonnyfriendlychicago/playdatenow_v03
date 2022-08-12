@@ -31,14 +31,6 @@ public class StateterritoryMdl {
 	
     // begin joins
     
-//    // join user
-//    @OneToMany(mappedBy="stateterritoryMdl", fetch = FetchType.LAZY)
-//    private List<UserMdl> userList; 
-//    
-//    // join userupdate
-//    @OneToMany(mappedBy="stateterritoryMdl", fetch = FetchType.LAZY)
-//    private List<UserupdateMdl> userupdateList; 
-//    
 //	join playdate
     @OneToMany(mappedBy="stateterritoryMdl", fetch = FetchType.LAZY)
     private List<PlaydateMdl> playdateList; 
@@ -81,9 +73,6 @@ public class StateterritoryMdl {
 		this.playdateList = playdateList;
 	}
 
-
-
-    
     // end: getters and setters
     
 // end mdl

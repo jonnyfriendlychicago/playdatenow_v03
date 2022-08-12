@@ -17,6 +17,5 @@ public interface RsvpRpo extends CrudRepository<RsvpMdl, Long> {
 	RsvpMdl findByIdIs(Long id);
 	
 	List<RsvpMdl> findAllByPlaydateMdl(PlaydateMdl playdateMdl);
-//	
-//	List<RsvpMdl> findByTwintwoMdlNotContains(TwintwoMdl twintwoMdl);
+
 }

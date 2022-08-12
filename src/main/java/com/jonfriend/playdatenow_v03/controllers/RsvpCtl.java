@@ -35,7 +35,7 @@ public class RsvpCtl {
 	@Autowired
 	private PlaydateSrv playdateSrv;
 	
-	// JRF: THINK WE CAN TAKE THIS OUT NOW
+	// JRF: THINK WE CAN TAKE THIS OUT NOW, will delete after app successfully deployed for first time
 	// display create-new page
 	@GetMapping("/playdate/{id}/rsvp/new")
 	public String newRsvp(
@@ -59,7 +59,7 @@ public class RsvpCtl {
 		return "rsvp/create.jsp"; 
 	}
 	
-	// JRF: DEF NEED THIS ONE
+	// JRF: DEF NEED THIS ONE!!!
 	// process the create-new  
 	@PostMapping("/playdate/{id}/rsvp/create")
 	public String addNewRsvp(
@@ -90,7 +90,6 @@ public class RsvpCtl {
 			// first... get current user whole object, for infusion into rsvp record
 			UserMdl currentUserMdl = userSrv.findById(authenticatedUserId); 
 			
-			// begin: code design from platform
 			// first, instantiate the new object
 			RsvpMdl newOtc = new RsvpMdl(); // ... and next: infuse into that object all the values from the incoming model/form
 			newOtc.setPlaydateMdl(playdateObj); // parent record
@@ -101,19 +100,12 @@ public class RsvpCtl {
 			newOtc.setComment(rsvpMdl.getComment());
 
 			rsvpSrv.create(newOtc);
-			// end: code design from platform
-			
-			// begin: JRF/cam refactor, which should create new perfectly.. but instead just updates the most recently created record
-//			rsvpMdl.setUserMdl( currentUserMdl);
-//			rsvpMdl.setPlaydateMdl(playdateObj); 
-//			rsvpSrv.create(rsvpMdl);
-			// end: JRF/cam refactor
 			
 			return "redirect:/playdate/" + playdateId ;
 		}
 	} 
 	
-	// JRF: THINK WE CAN TAKE THIS OUT NOW
+	// JRF: THINK WE CAN TAKE THIS OUT NOW, will delete after app successfully deployed for first time
 	// view record
 	@GetMapping("/rsvp/{id}")
 	public String showRsvp(
@@ -133,34 +125,8 @@ public class RsvpCtl {
 		model.addAttribute("rsvp", rsvpObj); // deliver the object that is the primary object on this page 
 		model.addAttribute("playdate", playdateObj);   // deliver the object that is the parent to the primary object on this page
 		
-//		model.addAttribute("rsvpList", rsvpSrv.getAssignedPlaydates(playdateObj));
-//		model.addAttribute("assignedCategories", twintwoSrv.getAssignedPlaydates(playdateObj));
-//		model.addAttribute("unassignedCategories", twintwoSrv.getUnassignedPlaydates(playdateObj));
-		
 		return "rsvp/record.jsp";
 	}
-	
-	// display edit page -- commented out here, replaced by new dislay edit page that follows
-//	@GetMapping("/rsvp/{id}/edit")
-//	public String editRsvp(
-//			@PathVariable("id") Long rsvpId
-//			, Model model
-//			, HttpSession session
-//			) {
-//		
-//		// log out the unauth / deliver the auth user data
-//		if(session.getAttribute("userId") == null) {return "redirect:/logout";}
-//		Long AuthenticatedUserId = (Long) session.getAttribute("userId");
-//		model.addAttribute("authUser", userSrv.findById(AuthenticatedUserId));
-//		
-//		RsvpMdl rsvpObj = rsvpSrv.findById(rsvpId); // get the object that is the primary object displayed on this page
-//		PlaydateMdl playdateObj = rsvpObj.getPlaydateMdl(); // get the object that is the parent to the primary object
-//		
-//		model.addAttribute("rsvp", rsvpObj); // deliver the object that is the primary object on this page 
-//		model.addAttribute("playdate", playdateObj);   // deliver the object that is the parent to the primary object on this page
-//
-//		return "rsvp/edit.jsp";
-//	}
 
 	// JRF: THIS IS ABSOLUTELY NEEDED!  The code style section makes it look old school, but this is actually delivering the editRsvp interface on a page that contains the playdate info
 	// display edit page
@@ -230,8 +196,6 @@ public class RsvpCtl {
 		model.addAttribute("sumRsvpDotAdultsCount", sumRsvpDotAdultsCount); 
 		
 		model.addAttribute("openKidsSpots", openKidsSpots); 
-		
-		
 
 		return "rsvp/edit.jsp";
 	}
